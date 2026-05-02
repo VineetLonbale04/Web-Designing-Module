@@ -1,137 +1,92 @@
-I<!DOCTYPE
-
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-
-<title>Experiential Learning Workshop</title>
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <title>Workshop Registration with Payment</title>
 </head>
+<body style="font-family: Arial, sans-serif; background-color:#f4f6f8; margin:0; padding:0;">
 
-<link rel="stylesheet" href="">
+    <div style="width:600px; margin:40px auto; background:#ffffff; padding:30px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1);">
+        
+        <h2 style="text-align:center; color:#333;">Workshop Registration</h2>
+        <p style="text-align:center; color:#777;">Fill the form and complete payment</p>
 
-<body>
+        <form>
 
-<header>
+            <fieldset style="border:1px solid #ddd; padding:15px; margin-bottom:20px;">
+                <legend style="font-weight:bold;">Personal Details</legend>
 
-<h1> Experiential Learning Workshop</h1>
+                <label>Full Name</label><br>
+                <input type="text" placeholder="Enter your name" style="width:100%; padding:8px; margin-bottom:10px;"><br>
 
-<p>Learn by Doing | Limited Seats Available</p>
+                <label>Age</label><br>
+                <input type="number" placeholder="Enter your age" style="width:100%; padding:8px; margin-bottom:10px;"><br>
 
-</header>
+                <label>Gender</label><br>
+                <select style="width:100%; padding:8px; margin-bottom:10px;">
+                    <option>Select Gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
 
-<section class="form-section">
+                <label>Address</label><br>
+                <textarea placeholder="Enter your address" style="width:100%; padding:8px; margin-bottom:10px;"></textarea>
 
-<form>
+                <label>Phone Number</label><br>
+                <input type="text" placeholder="Enter phone number" style="width:100%; padding:8px; margin-bottom:10px;"><br>
 
-<h2>Register Now</h2>
+                <label>Email Address</label><br>
+                <input type="email" placeholder="Enter your email" style="width:100%; padding:8px;">
+            </fieldset>
 
-<!-- Personal Info -->
+            <fieldset style="border:1px solid #ddd; padding:15px;">
+                <legend style="font-weight:bold;">Payment Details</legend>
 
-<div class="card">
+                <label>
+                    <input type="radio" name="payment"> Credit Card
+                </label>
+                <label style="margin-left:20px;">
+                    <input type="radio" name="payment"> Net Banking
+                </label>
 
-<h3> Personal Information</h3>
+                <hr style="margin:15px 0;">
 
-<input type="text" placeholder="Full Name" required>
+                <label>Card Number</label><br>
+                <input type="text" placeholder="XXXX XXXX XXXX XXXX" style="width:100%; padding:8px; margin-bottom:10px;"><br>
 
-<input type="number" placeholder="Age" required>
+                <label>Card Holder Name</label><br>
+                <input type="text" placeholder="Name on card" style="width:100%; padding:8px; margin-bottom:10px;"><br>
 
-<div class="inline">
+                <label>Expiry Date</label><br>
+                <input type="month" style="width:100%; padding:8px; margin-bottom:10px;"><br>
 
-<label><input type="radio" name="gender"> Male</label>
+                <label>CVV</label><br>
+                <input type="password" placeholder="CVV" style="width:100%; padding:8px; margin-bottom:15px;"><br>
 
-<label><input type="radio" name="gender"> Female</label>
+                <label>Select Bank</label><br>
+                <select style="width:100%; padding:8px; margin-bottom:10px;">
+                    <option>Select Bank</option>
+                    <option>SBI</option>
+                    <option>HDFC</option>
+                    <option>ICICI</option>
+                </select>
 
-<label><input type="radio" name="gender"> Other</label>
+                <label>User ID</label><br>
+                <input type="text" placeholder="Enter User ID" style="width:100%; padding:8px; margin-bottom:10px;"><br>
 
-</div>
+                <label>Password</label><br>
+                <input type="password" placeholder="Enter Password" style="width:100%; padding:8px;">
+            </fieldset>
 
-<textarea placeholder="Address"></textarea>
+            <br>
 
-<input type="email" placeholder="Email ID" required>
+            <button type="submit" style="width:100%; padding:12px; background:#007bff; color:#fff; border:none; border-radius:5px; font-size:16px;">
+                Pay Now
+            </button>
 
-<input type="tel" placeholder="Phone Number" required>
+        </form>
+    </div>
 
-</div>
-
-<!-- Workshop Details -->
-
-<div class="card">
-
-<h3> Workshop Preferences</h3>
-
-<label>Select Domain</label>
-
-<select required>
-
-<option value="">Choose</option>
-
-<option>Web Development</option>
-
-<option>AI & ML</option>
-корtiоnаyber security/option>
-
-<option Data Science</option>
-
-</select>
-
-<label>Preferred Mode</label>
-
-<select>
-
-<option>Online</option>
-
-<option>Offline</option>
-
-</select>
-
-</div>
-
-<1-- Payment-->
-
-<div class="card">
-
-<h3> Payment Details</h3>
-
-<label>Choose Method</label>
-
-<select>
-
-<option>Credit Card</option>
-
-coption>UPI</option
-
-<option>Net Banking</option>
-
-coption Wallet</option>
-
-</select>
-
-<input type="text" placeholder "Enter Payment ID / Card Number">
-
-</div>
-
-<!-- Buttons ->>
-
-<div class="btn-group">
-
-<button type="submit">Submit</button>
-
-<button type="reset">Clear</button>
-
-</div>
-
-</form>
-
-</section>
-
-<footer>
-
-<p> 2026 Experiential Learning Program/p>
-
-</footer>
 </body>
 </html>
