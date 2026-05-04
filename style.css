@@ -1,176 +1,150 @@
 /* =========================
-   RESET & BASE STYLES
+   GLOBAL STYLING
 ========================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: 'Inter', 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #2d67ad, #d9e4f5);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 40px 15px;
-    color: #333;
+    background: linear-gradient(135deg, #dbeafe, #f8fafc);
+    font-family: 'Segoe UI', sans-serif;
 }
 
-/* =========================
-   CONTAINER
-========================= */
-.container {
-    width: 100%;
-    max-width: 680px;
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 30px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    animation: fadeIn 0.6s ease;
-}
-
-/* =========================
-   HEADINGS
-========================= */
-h2 {
-    text-align: center;
-    font-size: 26px;
-    color: #1a1a1a;
-    margin-bottom: 6px;
-}
-
-p {
-    text-align: center;
-    color: #666;
-    font-size: 14px;
-    margin-bottom: 25px;
-}
-
-/* =========================
-   FIELDSET DESIGN
-========================= */
-fieldset {
-    border: 1px solid #e6e9ef;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 25px;
+/* Smooth transitions */
+* {
     transition: all 0.3s ease;
 }
 
-fieldset:hover {
-    border-color: #0d6efd;
-    box-shadow: 0 4px 12px rgba(13,110,253,0.08);
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+    backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.bg-primary {
+    background: linear-gradient(135deg, #0d6efd, #6610f2) !important;
+}
+
+.bg-primary h1 {
+    letter-spacing: 1px;
+}
+
+/* =========================
+   CARD DESIGN (GLASS EFFECT)
+========================= */
+.card {
+    border-radius: 18px;
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+}
+
+/* Hover effect */
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+}
+
+/* Card header gradient */
+.card-header {
+    border-top-left-radius: 18px !important;
+    border-top-right-radius: 18px !important;
+}
+
+/* =========================
+   FIELDSET
+========================= */
+fieldset {
+    border: 1px solid #e5e7eb;
+    padding: 20px;
+    border-radius: 12px;
 }
 
 legend {
-    font-weight: 600;
     font-size: 16px;
-    color: #0d6efd;
-    padding: 0 5px;
+    padding: 0 8px;
 }
 
 /* =========================
-   LABELS
+   INPUT FIELDS
 ========================= */
-label {
-    display: block;
-    font-size: 14px;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-/* =========================
-   INPUTS
-========================= */
-input,
-select,
+.form-control,
+.form-select,
 textarea {
-    width: 100%;
-    padding: 10px 12px;
-    border-radius: 6px;
-    border: 1px solid #dcdfe6;
-    margin-bottom: 15px;
-    font-size: 14px;
-    transition: all 0.25s ease;
-    background: #fafbfc;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    padding: 10px;
+    background: #f9fafb;
 }
 
-/* Focus effect */
-input:focus,
-select:focus,
+/* Focus Glow Effect */
+.form-control:focus,
+.form-select:focus,
 textarea:focus {
     border-color: #0d6efd;
-    background: #fff;
-    box-shadow: 0 0 0 3px rgba(13,110,253,0.1);
-    outline: none;
+    box-shadow: 0 0 10px rgba(13,110,253,0.4);
+    background: #ffffff;
 }
 
 /* Hover */
-input:hover,
-select:hover,
-textarea:hover {
-    border-color: #b6c2d1;
+.form-control:hover,
+.form-select:hover {
+    border-color: #9ca3af;
 }
 
 /* =========================
    RADIO BUTTONS
 ========================= */
-input[type="radio"] {
-    width: auto;
-    margin-right: 6px;
-    accent-color: #0d6efd;
+.form-check-input {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
-fieldset label {
-    display: inline-flex;
-    align-items: center;
-    margin-right: 15px;
-    font-size: 14px;
-}
-
-/* =========================
-   DIVIDER
-========================= */
-hr {
-    border: none;
-    border-top: 1px solid #e6e9ef;
-    margin: 20px 0;
+.form-check-label {
+    cursor: pointer;
 }
 
 /* =========================
    BUTTON
 ========================= */
 button {
-    width: 100%;
-    padding: 13px;
-    border-radius: 8px;
-    border: none;
-    background: linear-gradient(135deg, #0d6efd, #3a8bff);
-    color: white;
+    border-radius: 12px !important;
     font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
 }
 
-/* Hover */
+/* Hover effect */
 button:hover {
-    background: linear-gradient(135deg, #0b5ed7, #2f6fe0);
-    transform: translateY(-1px);
-    box-shadow: 0 6px 15px rgba(13,110,253,0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(13,110,253,0.3);
 }
 
 /* Click */
 button:active {
-    transform: scale(0.98);
+    transform: scale(0.97);
 }
 
 /* =========================
-   ANIMATION
+   FOOTER
 ========================= */
-@keyframes fadeIn {
+footer {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+.card {
+    animation: fadeInUp 0.6s ease;
+}
+
+@keyframes fadeInUp {
     from {
         opacity: 0;
         transform: translateY(25px);
@@ -182,71 +156,38 @@ button:active {
 }
 
 /* =========================
-   RESPONSIVE DESIGN
+   SCROLLBAR (OPTIONAL COOL)
+========================= */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#0d6efd, #6610f2);
+    border-radius: 10px;
+}
+
+/* =========================
+   RESPONSIVE TWEAKS
 ========================= */
 @media (max-width: 768px) {
 
-    .container {
-        padding: 25px;
+    .card {
+        padding: 10px;
     }
 
-    h2 {
-        font-size: 22px;
-    }
-
-    fieldset {
-        padding: 15px;
+    h1 {
+        font-size: 24px;
     }
 }
 
 @media (max-width: 480px) {
 
-    body {
-        padding: 20px 10px;
-    }
-
-    .container {
-        padding: 20px;
-        border-radius: 10px;
-    }
-
-    h2 {
+    h1 {
         font-size: 20px;
-    }
-
-    p {
-        font-size: 13px;
-    }
-
-    input,
-    select,
-    textarea {
-        font-size: 13px;
-        padding: 9px;
     }
 
     button {
         font-size: 14px;
-        padding: 11px;
     }
-}
-
-/* =========================
-   EXTRA POLISH
-========================= */
-
-/* Smooth scroll (future use) */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Placeholder styling */
-::placeholder {
-    color: #9aa4b2;
-}
-
-/* Selection color */
-::selection {
-    background: #0d6efd;
-    color: #fff;
 }
